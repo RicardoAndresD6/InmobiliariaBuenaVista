@@ -80,7 +80,7 @@ body{
 .hero{
     width: 100%;
     height: 100vh;
-    background: url(/img/fondo/bosques-de-casanova-fachada.jpg) center no-repeat;
+    background: url(img/fondo/bosques-de-casanova-fachada.jpg) center no-repeat;
     background-size: cover;
     position: relative;
 }
