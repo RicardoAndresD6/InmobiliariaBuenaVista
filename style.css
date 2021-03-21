@@ -1,0 +1,816 @@
+/*
+Theme Name: Inmobiliaria Buena Vista
+Theme URI: https://ricardoandresd6.github.io/PortfolioR/
+Author: Ricardo Diaz 
+Author URI: https://ricardoandresd6.github.io/PortfolioR/
+Description: Tema realizado para cliente del inmueble usando html, css y bootstrap.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Inmobiliariabuenavista
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*=================
+=======ESTILO======
+===================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    min-height: 200vh;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.nav{
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+    background-color: transparent;
+}
+
+.nav a{
+    color: #fff;
+    transition: .3s ease-out all;
+}
+
+.nav a:hover{
+    color: red;    
+}
+
+.menu {
+    padding: 0 !important;
+}
+
+.icon-derecha{
+    margin-left: auto;
+}
+
+
+.navbar-toggler-icon{
+    color: #fff !important;
+}
+
+
+/*Apply styles after scroll*/
+
+.scrolling-active .nav{
+    height: 5rem;
+    background-color: #212529 ;
+    width: 100%;
+}
+
+
+/* Hero Demo Content*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url(/img/fondo/bosques-de-casanova-fachada.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+
+.float{
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    background: none !important;
+}
+
+.contenedor{
+    width: 100%;
+    height: 30%;
+    background-color: #212529;
+}
+
+.contenedor .descripcion{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+
+.descripcion{
+    text-align: center;
+}
+
+/*Media querie para flex mobile first*/
+@media screen and (min-width: 768px) {
+    .contenedor .descripcion{
+        flex-direction: row;
+    }
+}
+
+.location{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+.inmobiliaria{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+.desde{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+.dormitorios{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+.dosPequeño{
+    font-size: 15px;
+    position: relative;
+    bottom:5px;
+}
+
+.colorIcono{
+    color: #d5ae87;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*Descripcion*/
+.conten .descripcionEntregas{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*Media querie para flex mobile first*/
+@media screen and (min-width: 768px) {
+    .conten .descripcionEntregas{
+        flex-direction: row;
+    }
+}
+
+.volver a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    
+}
+
+.beneficios{
+    background-color: #d5ae87;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+    text-align: justify;
+    color: white;
+}
+
+.entrega{
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.valor{
+    background-color: red;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+    text-align: justify;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .beneficios{
+        background-color: #d5ae87;
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: 500;
+        text-align: center;
+        color: white;
+    }
+    
+    .entrega{
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .valor{
+        background-color: red;
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: 500;
+        text-align: center;
+        color: white;
+    }
+}
+
+.containerr{
+    text-align: center !important;
+    display: flex;
+}
+
+.descripcionText{
+    background-color: #d5ae87;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 45%;
+    top: 30px;
+    
+
+}
+
+.descripcionText h2{
+    padding: 30px 0px 0px 0px;
+    color: white;
+}
+
+.descripcionText p{
+    padding: 10px;
+    text-align: justify;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .containerr{
+        text-align: center !important;
+        display: flex;
+    }
+    .imagen{
+        order: -1;
+    }
+    
+    .descripcionText{
+        background-color: #d5ae87;
+        width: 100%;
+        height: 100%;
+        left: 0 !important;
+        top: 0;
+    }
+}
+
+
+/*TABS*/
+
+.tabs {
+    width:100%;
+    height:auto;
+}
+.tabs .tab-header {
+    padding:10px;
+    display:flex;
+    justify-content: space-around;
+}
+.tabs .tab-header > div {
+    text-align:center;
+    font-size: 20px;
+    padding:10px;
+    font-weight:600;
+    color:#888;
+    cursor:pointer;
+    transition:all 300ms ease-in-out;
+}
+.tabs .tab-header > div.active {
+    color:#d5ae87;
+}
+
+.tabs .tab-body {
+    position:relative;
+    padding:20px;
+    background: white;
+    /*height:calc(100% - 50px);*/
+    height: 650px;
+    /*border-bottom: 1px solid black;*/
+    /*overflow:hidden;*/
+}
+.tabs .tab-body > div {
+    position:absolute;
+    opacity:0;
+    top:-100%;
+    transform:translateY(-10px);
+    transition:opacity 300ms ease-in-out,
+    transform 300ms ease-in-out;
+}
+.tabs .tab-body > div.active {
+    transform:translateY(0px);
+    top:30px;
+    opacity:1;
+  }
+  .tabs .tab-body .titulo {
+    color: #212529;
+    font-size: 40px;
+  }
+
+  .tabs .tab-body .titulo .red {
+    color: red !important; 
+  }
+
+  .tabs .tab-body .titulo {
+    color: #212529;
+    font-size: 38px;
+  }
+
+  .tabs .tab-body span .subtitle{
+    color: #212529;
+    font-size: 20px;
+  }
+
+  .tabs .tab-body .botonGrey{
+    background-color: rgb(94 100 103 / 1);
+    color: white;
+    font-size: 13px;
+    border-radius: 999px;
+    padding: 15px;
+    transition: all .3s;
+  }
+
+  .tabs .tab-body .botonGrey:hover{
+    background-color: white;
+    color: rgb(94 100 103 / 1);
+    border: 1px solid  rgb(94 100 103 / 1);;
+  }
+
+  .botonBrown{
+    background-color: #d5ae87;
+    color: white;
+    font-size: 13px;
+    border-radius: 999px;
+    padding: 15px;
+  }
+
+  .botonBrown:hover{
+    background-color: white;
+    color:  #d5ae87;
+    border: 1px solid  #d5ae87;
+  }
+
+  .tabs .tab-body .botonBrown{
+    background-color: #d5ae87;
+    color: white;
+    font-size: 13px;
+    border-radius: 999px;
+    padding: 15px;
+    transition: all .3s;
+  }
+
+  .tabs .tab-body .botonBrown:hover{
+    background-color: white;
+    color:  #d5ae87;
+    border: 1px solid  #d5ae87;
+  }
+
+  .tabs .tab-body p {
+    font-size: 20px !important;
+    color: #000;
+    font-weight: 500 !important;
+}  
+
+.tabs .tab-body p .descrip {
+    font-size: 40px !important;
+    color: #000;
+    font-weight: 500 !important;
+}  
+
+
+
+  .tabs .tab-body p {
+    color:#555;
+    font-size:15px;
+  }
+
+
+  
+@media screen and (max-width: 768px) {
+    .tab{
+        width: 100%;
+        
+    }
+
+    .tabs .tab-header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        
+    }
+
+    .seccion1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .seccion2{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .seccion3{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .seccion4{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .imagen{
+        order: -1 !important;
+    }
+    
+    .botones{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .tabs .tab-body .titulo {
+        color: #212529;
+        font-size: 25px;
+      }
+    
+      .tabs .tab-body .titulo .red {
+        color: red !important; 
+      }
+
+      .tabs .tab-body p {
+        color: #555;
+        font-size: 15px !important;
+    }
+
+}
+
+/*-----------------MODAL-------------------------*/
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.colorBrown{
+    color: #d5ae87;
+}
+.titlemodal{
+    font-size: 1.3rem;
+}
+
+.contactModal{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-content {
+        width: 125%;
+    }
+
+    .contactModal{
+        flex-direction: row;
+    }
+}
+
+
+/* -----------------GALERIA--------------------------*/
+.container_gallery{
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 15px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*---------------------lightbox-----------------------------*/
+
+.gallery .gallery__item{overflow: hidden};
+
+.gallery .gallery__item a{
+    width: 100%;
+    height:100%;
+}
+.gallery .gallery__item a > img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery .gallery__item a > img:hover{
+    transform: scale(1.5) rotate(30deg);
+}
+
+
+@media screen and (min-width: 768px) {
+    .container_gallery{
+        width: 70%;
+        margin: 2rem auto; 
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 5vw);
+        grid-gap: 15px;
+    }
+    
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+      .gallery__item--1 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 7;
+     
+    }
+    
+    
+    .gallery__item--2 {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    
+    }
+    
+    .gallery__item--3 {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    
+    }
+}
+
+/*-----------------Banner Credito Hipotecario-----------------------*/
+.creditocontainer{
+    width: 100%;
+    height: 50%;
+    background-color: #212529;
+}
+.credito{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+    
+.credito{
+    text-align: center;
+}
+
+/*Media querie para flex mobile first*/
+@media screen and (min-width: 768px) {
+    .credito{
+        flex-direction: row;
+    }
+}
+
+
+
+.bancoItau{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.bancoChile{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+   
+}
+
+.bancoMetlife{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.bancoSantander{
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.white{
+    color: white;
+}
+
+.titu{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.formContent{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .formContent{
+        flex-direction: row;
+    }
+}
+
+.negrita{
+    font-size: 15px !important;
+}
+
+.buttonContact{
+    float: right;
+}
+
+.firstPart{
+    width: 95%;
+    margin: 0px 10px 0px 10px;
+}
+
+.secontPart{
+    width: 95%;
+    margin: 0px 10px 0px 10px;
+}
+
+.thirdPart{
+    width: 95%;
+    margin: 0px 10px 0px 10px;
+}
+
+.form-control{
+    background-color: #f2f1f1;
+}
+
+
+.footer{
+    
+    background-color: #f2f1f1;
+   
+}
+
+.derechos{
+    width: 100%;
+    height: 15rem;
+}
+
+.titleautor{
+    font-size: 1.5rem;
+    text-align: start;
+    padding-left: 6rem;
+}
+
+.copyright{
+    width: 100%;
+    padding: 1rem;
+}
+
+.titlepart{
+    font-size: 1.5rem;
+    text-align: end;
+    padding-left: 31rem;
+}
+
+@media screen and (max-width: 768px) {
+    .titleautor{
+        font-size: 1.5rem;
+        text-align: start;
+        padding-left: 2.2rem;
+    }
+
+    .titlepart{
+        display: none !important;
+    }
+}
+/*----------------------PARTICIPANTES-------------------------------*/
+  .slider {
+    width: 100%;
+    height: 125px;
+    position: relative;
+    background: white;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+    display: flex;
+    overflow: hidden;
+  }
+  .slide {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    animation: slideshow 8s linear infinite;
+  }
+  .slide img {
+    height: 70px;
+    padding: 0 30px 0 30px;
+  }
+  @keyframes slideshow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+  }
+  .slider::before, .slider::after {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 2;
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider::after {
+    right:0;
+    top:0;
+    transform: rotateZ(180deg);
+  }
+
+  .slider {
+    width: 100%;
+    height: 125px;
+    position: relative;
+    background: white;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+    display: flex;
+    overflow: hidden;
+  }
+  .slide {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    animation: slideshow 8s linear infinite;
+  }
+  .slide img {
+    height: 70px;
+    padding: 0 30px 0 30px;
+  }
+  @keyframes slideshow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+  }
+  .slider::before, .slider::after {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 2;
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider::after {
+    right:0;
+    top:0;
+    transform: rotateZ(180deg);
+  }
+/*---------------------------------------------------------------------------*/
+
+  @media screen and (max-width: 768px) {
+    .wrapper {
+        display: none !important; 
+      }
+      
+}
